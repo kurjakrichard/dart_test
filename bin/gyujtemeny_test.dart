@@ -21,14 +21,15 @@ class gyujtemenyTest {
   //
 
   void repeat() {
-    /** var countryList = [
+    var countryList = [
       'Országok listája:',
-      for (var country in countries()) 'Ország: $country',
-    ];**/
+      for (var country in countries) 'Ország: $country',
+    ];
     print(newList.runtimeType);
     //print(hello);
     hel.add('hi'); //Ez nem működik unmodifiable listán.
     print(hel);
     print(conditionList[0].toList());
+    print(countryList);
   }
 }
