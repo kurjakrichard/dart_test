@@ -6,6 +6,11 @@ void main() {
   //var alap = nullableTest();
   //alap.repeat();
   //print('hello');**/
+  var egy = 'Szöveg';
+  var ketto = egy;
+  var harom = ketto;
+
+  print(harom);
 
   //Ez a rész a gyűjtemények tesztelésére való
   var lista = gyujtemenyTest();
