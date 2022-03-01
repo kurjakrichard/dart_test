@@ -1,6 +1,6 @@
 import 'future_test.dart';
 import 'gyujtemeny_test.dart';
-import 'nullable_test.dart';
+//import 'nullable_test.dart';
 
 void main() {
   /**Ez a rész a nullable változók tesztelésére való

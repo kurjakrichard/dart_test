@@ -7,6 +7,7 @@ class gyujtemenyTest {
 
   // Feltételes elem hozzáadás
   var conditionList = [
+    // ignore: dead_code
     if (true) {'siker'} else if (false) {'kudarc'}
   ];
 
