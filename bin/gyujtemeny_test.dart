@@ -29,7 +29,7 @@ class gyujtemenyTest {
     print(newList.runtimeType);
     //print(hello);
     hel.add('hi'); //Ez nem működik unmodifiable listán.
-    print(hel);
+    print(hel.toString());
     print(conditionList[0].toList());
     print(countryList);
   }
