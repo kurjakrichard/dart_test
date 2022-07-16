@@ -11,7 +11,7 @@ void main() {
 
   var husky = Dog(age: 5, breed: 'Husky', color: 'black', name: 'Cézár');
   var fixlist = List<String>.unmodifiable(['hhh']);
-  fixlist.add('jjj');
+  //fixlist.add('jjj');  not working
   print(fixlist);
 
   print(husky.name);
