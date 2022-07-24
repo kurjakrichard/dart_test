@@ -1,4 +1,4 @@
-class Dynamic_test {
+class DynamicTest {
 //dynamic típus működésének a tesztelése
 
   void dynamicTest() {
