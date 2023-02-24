@@ -1,10 +1,12 @@
+import 'cat.dart';
 import 'dog.dart';
 import 'future_test.dart';
 import 'collections_test.dart';
+import 'generator_function_test.dart';
 import 'nullable_test.dart';
 import 'dynamic_test.dart';
 
-void main() {
+void main() async {
   //Ez a rész a String interpolation tesztelésére való
   print('Ez a rész a String interpolation tesztelésére való.');
   String egy = 'Eredmény:';
@@ -38,6 +40,9 @@ void main() {
   print(husky.name);
   var boxer = Dog(age: 10, name: 'Cézár', breed: 'Boxer');
   print(boxer.breed);
+  boxer.voice();
+  // ignore: unused_local_variable
+  var cica = Cat(owner: 'Ricsi', age: 2, name: 'Cicus');
 
   print('Async program kezdődik.');
   FutureTest futureTest = FutureTest();
@@ -45,6 +50,14 @@ void main() {
   futureTest.printFileContent2();
 
   print('Async program befejeződik.');
+
+  for (var number in myGeneratorFunction()) {
+    print("Kapott érték: $number");
+  }
+
+  await for (var number in myAsyncGeneratorFunction()) {
+    print('Eltelt idő: $number másodperc');
+  }
 }
 
 int szorzas(int a, int b) {

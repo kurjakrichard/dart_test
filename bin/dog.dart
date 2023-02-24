@@ -1,4 +1,6 @@
-class Dog {
+import 'animal.dart';
+
+class Dog extends Animal {
   int? age;
   String? name;
   String? breed;
