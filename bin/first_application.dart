@@ -55,9 +55,27 @@ void main() async {
     print("Kapott érték: $number");
   }
 
-  await for (var number in myAsyncGeneratorFunction()) {
-    print('Eltelt idő: $number másodperc');
+  // await for (var number in myAsyncGeneratorFunction()) {
+//    print('Eltelt idő: $number másodperc');
+  // }
+  print(sortingAuthor('Ez egy hosszú név Brandon Sanderson'));
+}
+
+String sortingAuthor(String author) {
+  List<String> authorSplit = author.split(' ');
+  String authorSort = authorSplit[authorSplit.length - 1];
+
+  String authorLast = '';
+  if (authorSplit.length > 1) {
+    authorSplit.removeLast();
+    for (var item in authorSplit) {
+      authorLast = '$authorLast, $item';
+    }
   }
+
+  authorLast = authorLast.replaceAll(",", "");
+
+  return '$authorSort,$authorLast';
 }
 
 int szorzas(int a, int b) {
