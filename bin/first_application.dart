@@ -5,10 +5,23 @@ import 'collections_test.dart';
 import 'generator_function_test.dart';
 import 'nullable_test.dart';
 import 'dynamic_test.dart';
+import 'enum_test.dart';
 
 void main() async {
+  //Ez a rész az enumok tesztelésére való
+  var project = {1: Status.notStarted.name};
+  var project2 = {1: Status2.notStarted.value};
+  var project3 = {1: Status2.notStarted.toString()};
+  var value2 = Status2.notStarted.value2;
+
+  print('\nEz a rész az enumok tesztelésére való');
+  print(project);
+  print(project2);
+  print(project3);
+  print(value2);
+
   //Ez a rész a String interpolation tesztelésére való
-  print('Ez a rész a String interpolation tesztelésére való.');
+  print('\nEz a rész a String interpolation tesztelésére való.');
   String egy = 'Eredmény:';
   int ketto = 5;
   var harom = 2; //Lehet a var-ral is változót létrehozni
@@ -29,6 +42,8 @@ void main() async {
   print('\nEz a rész a gyűjtemények kezelésének tesztelésére való.');
   var collections_test = CollectionsTest();
   collections_test.repeat();
+  List<String> maptolist = collections_test.maptolist();
+  print(maptolist);
 
   //Ez a rész a dog osztály tesztelésére való
   print('\nEz a rész a dog osztály tesztelésére való.');
